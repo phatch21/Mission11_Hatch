@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { Table, Form, Container, Row, Col } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 interface Book {
   bookID: number;
