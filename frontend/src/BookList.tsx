@@ -10,9 +10,11 @@ interface Book {
   publisher: string;
   isbn: string;
   classification: string;
+  category: string; // ✅ Added
   pageCount: number;
   price: number;
 }
+
 
 const BookList = () => {
   const [books, setBooks] = useState<Book[]>([]);
@@ -86,6 +88,7 @@ const BookList = () => {
                 <th>Publisher</th>
                 <th>ISBN</th>
                 <th>Classification</th>
+                <th>Category</th>
                 <th>Pages</th>
                 <th>Price ($)</th>
               </tr>
@@ -98,6 +101,7 @@ const BookList = () => {
                   <td>{book.publisher}</td>
                   <td>{book.isbn}</td>
                   <td>{book.classification}</td>
+                  <td>{book.category}</td>
                   <td>{book.pageCount}</td>
                   <td>{book.price.toFixed(2)}</td>
                 </tr>
